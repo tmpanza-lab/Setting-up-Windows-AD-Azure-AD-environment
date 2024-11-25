@@ -228,22 +228,34 @@ o Configure DHCP Scopes:
 
 • Install File Server Role:
 o In Server Manager, add the File and Storage Services role.
+![image](https://github.com/user-attachments/assets/d841dadc-6208-43a8-b50a-14e969cc4094)
+![image](https://github.com/user-attachments/assets/3f1c7d19-5681-43c3-9321-b2289242ca39)
 
 
 • Create Shared Folders:
-o Create folders (e.g., DepartmentShares) and set NTFS permissions (e.g., restrict HR
-folder to HR users).
+![image](https://github.com/user-attachments/assets/2f9aa4d0-9845-437a-aa3e-7113f8022d7d)
 
+o Create folders (e.g., DepartmentShares)
+![image](https://github.com/user-attachments/assets/a18f3512-e9f4-4c9f-8960-16685733402f)
+
+o Set NTFS permissions (e.g., restrict HR folder to HR users).
+![image](https://github.com/user-attachments/assets/1206d2bc-9c98-4b04-b0b7-1cb816e0d80f)
+![image](https://github.com/user-attachments/assets/7d98c9df-c7c1-4f52-a3b2-4c56b493bfbd)
+![image](https://github.com/user-attachments/assets/403641ce-3040-4035-a5bc-cdc1b171f592)
 
 • Configure Quotas:
 o Use File Server Resource Manager (FSRM).
-o Go to Quota Management > Create Quota and define storage limits for specific
-directories.
+o Go to Quota Management > Create Quota and define storage limits for specific directories.
+![image](https://github.com/user-attachments/assets/dddd38f4-fc14-422e-9d36-444fca5ab1cb)
+![image](https://github.com/user-attachments/assets/6017e87c-8dda-41d8-aafb-a3f97f852035)
+![image](https://github.com/user-attachments/assets/90346297-0867-4609-aac7-cfb0295127bf)
 
-
+Quota has been successfully created and applied
+![image](https://github.com/user-attachments/assets/2954e537-681e-42d4-9f43-7ebf28a16fc6)
 
 • Test NTFS Permissions and Quotas:
 o Log in with different user accounts to verify access permissions and storage quotas.
+![image](https://github.com/user-attachments/assets/60d4fcb4-d016-45b8-9af6-cda9fae18b6b)
 
 
 
