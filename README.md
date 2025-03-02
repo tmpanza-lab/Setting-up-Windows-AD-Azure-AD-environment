@@ -61,10 +61,12 @@ o Complete the installation, which will automatically reboot the server
 • Script for Provisioning User Accounts:
 o Open PowerShell ISE and write scripts to create user accounts in AD.
 • Automate User Provisioning:
-# Variables 
+# Variables
+```
 $FirstName = "Thokozane" $LastName = "Mpanza"
 $Password = ConvertTo-SecureString "Password123" -AsPlainText -Force
 $OU = "OU=Users,DC=mylab,DC=local"
+```
 # Create user
 New-ADUser -Name "$FirstName $LastName" -GivenName $FirstName -Surname $LastName -SamAccountName "tmpanza" -UserPrincipalName "tmpanza@mylab.local" - Path $OU -AccountPassword $Password -Enabled $true
 
@@ -72,7 +74,7 @@ New-ADUser -Name "$FirstName $LastName" -GivenName $FirstName -Surname $LastName
 ![image](https://github.com/user-attachments/assets/71ce28eb-c8de-4ac0-9c6d-3cae52219483)
 Automate Deprovisioning:
 o Use Remove-ADUser to remove user accounts:
-Remove-ADUser -Identity "jdoe"
+`Remove-ADUser -Identity "jdoe"'`
 
 5. Join Windows 10 Client to Domain via PowerShell
 • Prerequisite: Ensure that the client VM has DNS settings pointing to your Domain Controller's IP (e.g., 192.168.18.73)
