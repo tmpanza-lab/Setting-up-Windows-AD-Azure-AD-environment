@@ -68,7 +68,9 @@ $Password = ConvertTo-SecureString "Password123" -AsPlainText -Force
 $OU = "OU=Users,DC=mylab,DC=local"
 ```
 # Create user
+```
 New-ADUser -Name "$FirstName $LastName" -GivenName $FirstName -Surname $LastName -SamAccountName "tmpanza" -UserPrincipalName "tmpanza@mylab.local" - Path $OU -AccountPassword $Password -Enabled $true
+```
 
 ![image](https://github.com/user-attachments/assets/cd74507c-5afc-4a17-ad68-774e2be762f0)
 ![image](https://github.com/user-attachments/assets/71ce28eb-c8de-4ac0-9c6d-3cae52219483)
@@ -77,17 +79,17 @@ o Use Remove-ADUser to remove user accounts:
 `Remove-ADUser -Identity "jdoe"'`
 
 5. Join Windows 10 Client to Domain via PowerShell
-• Prerequisite: Ensure that the client VM has DNS settings pointing to your Domain Controller's IP (e.g., 192.168.18.73)
+• Prerequisite: Ensure that the client VM has DNS settings pointing to your Domain Controller's IP (e.g., `192.168.18.73`)
 ![image](https://github.com/user-attachments/assets/c52d7a2f-93b0-437b-b6fb-bd85fd14b2bf)
 
 • Run this PowerShell command on the Windows 10 client:
-Add-Computer -DomainName "mylab.local" -Credential mylab\Administrator -Restart
+`Add-Computer -DomainName "mylab.local" -Credential mylab\Administrator -Restart`
 • Replace "Administrator" with the domain admin account, and the client will restart to apply the domain join.
 ![image](https://github.com/user-attachments/assets/f38d00d1-e42a-4a37-9090-5b3490c1e426)
 Install Remote Server Administration Tools (RSAT) on Windows 10 Client PC
 ![image](https://github.com/user-attachments/assets/2f35c7b7-da54-4f85-8157-1d7ad75cfa13)
 List all RSAT features and the installed state using PowerShell
-Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property DisplayName, State
+`Get-WindowsCapability -Name RSAT* -Online | Select-Object -Property DisplayName, State`
 ![image](https://github.com/user-attachments/assets/2140ea26-6bb0-4e5f-814d-86f6aa1952e7)
 
 ![image](https://github.com/user-attachments/assets/8cb609b8-3c2a-45ca-bfaf-a0de36c5fb42)
@@ -157,7 +159,7 @@ o	Navigate to Azure Active Directory > Users.
 o	Check if your on-prem AD users are listed in the Azure AD user list.
 3.	Force a Manual Synchronization:
 o	Open PowerShell as Administrator and run
-Start-ADSyncSyncCycle -PolicyType Delta
+`Start-ADSyncSyncCycle -PolicyType Delta`
 ![image](https://github.com/user-attachments/assets/e63f2e7c-eeaf-4579-ab93-ab4017a59fec)
 Verify Sync Results:
 •	After running the sync, check the Azure AD portal to ensure newly added or modified on-prem AD users appear in Azure AD.
@@ -186,8 +188,9 @@ o To disable USB storage: Computer Configuration > Policies > Administrative Tem
 ![image](https://github.com/user-attachments/assets/355381be-4e63-45a5-a478-18baa6731630)
 o Enable Windows Defender and configure firewall rules:
 ![image](https://github.com/user-attachments/assets/e17d4c18-96a4-48e5-92cc-5a08dc24070d)
-Computer Configuration > Policies > Administrative Templates > Windows
+```Computer Configuration > Policies > Administrative Templates > Windows
 Components > Microsoft Defender Antivirus.
+```
 ![image](https://github.com/user-attachments/assets/63853944-9e9b-4517-b74c-22b8bee1bdd7)
 
 o Link the GPO to your Desktops OU and ensure the policy applies to client machines.
