@@ -2,7 +2,7 @@
 
 ## Objective
 
-The Windows AD & Azure AD environment Lab project is aimed to build and configure a Windows AD and Azure AD environment. The primary focus was to ensure our on-premise Active Directory integrates seamlessly with Azure AD using Azure AD Connect, generating test telemetry to mimic real-world scenarios. This hands-on experience was designed to deepen understanding my understanding of network security, Azure Active Directory and hybrid identity solutions.
+The Windows AD & Azure AD environment Lab project is aimed to build and configure a Windows AD and Azure AD environment. The primary focus was to ensure our on-premise Active Directory integrates seamlessly with Azure AD using Azure AD Connect, generating a test telemetry to mimic real-world scenarios. This hands-on lab was designed to deepen my understanding understanding of IAM, cloud, network security, Azure Active Directory and hybrid identity solutions.
 
 ### Skills Learned
 
